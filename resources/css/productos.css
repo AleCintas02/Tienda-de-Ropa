@@ -1,0 +1,128 @@
+#productos {
+    padding: 20px;
+}
+
+.contenedor-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.titulo-seccion {
+    font-size: 3rem;
+    text-decoration: overline;
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.producto-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 40px); /* Tres productos por fila con 20px gap */
+    max-width: 300px; /* Ajusta según el tamaño deseado */
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño */
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+}
+
+.producto-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.producto-nombre {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.producto-descripcion {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.producto-precio {
+    font-size: 1.2rem;
+    color: #007AFF;
+}
+
+@media (max-width: 1200px) {
+    .producto-card {
+        flex: 1 1 calc(50% - 40px); /* Dos productos por fila */
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto-card {
+        flex: 1 1 100%; /* Un producto por fila */
+    }
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.paginacion button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.paginacion button:hover {
+    background-color: #ccc;
+}
+
+.paginacion button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+
+
+.filtro-categorias {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filtro-categorias ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filtro-categorias li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filtro-categorias li:hover {
+    background-color: #ccc;
+}

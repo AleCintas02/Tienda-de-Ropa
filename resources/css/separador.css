@@ -1,0 +1,6 @@
+.separador {
+    width: 100%; /* Ancho completo del separador */
+    height: 1px; /* Altura del separador */
+    background-color: #ccc; /* Color gris */
+    margin: 100px 0; /* Margen arriba y abajo para separación */
+  }
