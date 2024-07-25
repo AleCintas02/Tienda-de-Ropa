@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Producto;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class ProductoController extends Controller
 {
@@ -20,4 +21,5 @@ class ProductoController extends Controller
 
         return response()->json($productos);
     }
+    
 }

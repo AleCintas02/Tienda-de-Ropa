@@ -1,4 +1,63 @@
-#about{
-    height: 100vh;
-    padding: 50px 10%;
+/* About.css */
+#about {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.about-banner {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-width: 1400px;
+    gap: 100px;
+    flex-direction: column; /* Cambia la dirección en dispositivos pequeños */
+}
+
+.about-text {
+    flex: 1;
+    
+}
+
+.about-text h1 {
+    font-size: 2.5em;
+    color: #333;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-text h1 span {
+    color: #6a1b9a; /* Color púrpura para "Somos" */
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    height: auto;
+    width: 450px;
+}
+
+@media (max-width: 415px) {
+    .about-text h1{
+        font-size: 1.7rem; /* Color púrpura para "Somos" */
+    }
+
+    .about-text p{
+        font-size: .9rem; /* Color púrpura para "Somos" */
+    }
 }

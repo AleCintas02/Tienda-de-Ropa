@@ -3,6 +3,7 @@ import "../../css/productos.css";
 import remera from "../../img/remera.jpg";
 import PrimaryButton from "./PrimaryButton";
 import useProductos from "../hooks/useProductos"; // Asegúrate de usar la ruta correcta
+import Logo from "./Logo";
 
 function Productos() {
     const {
@@ -18,10 +19,9 @@ function Productos() {
     return (
         <section id="productos">
             <div className="contenedor-titulo">
-                <h2 className="titulo-seccion">Productos</h2>
+                <h2 className="titulo-seccion">Productos <Logo></Logo></h2>
             </div>
             <div className="filtro-categorias">
-                <h3>Categorías</h3>
                 <ul>
                     <li
                         key="all"
@@ -44,6 +44,7 @@ function Productos() {
             <div className="contenedor-productos">
                 {productos.map(producto => (
                     <div key={producto.id} className="producto-card">
+                        
                         <img src={producto.imagen || remera} alt={producto.nombre} className="producto-imagen" />
                         <h3 className="producto-nombre">{producto.nombre}</h3>
                         <p className="producto-precio">${producto.precio}</p>
