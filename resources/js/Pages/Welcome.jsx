@@ -24,13 +24,12 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
         <>
             <Head title="Welcome" />
             <Navbar></Navbar>
-            <Banner></Banner>
+            <Banner id="banner"></Banner>
+            <Productos id="productos"></Productos>
             <Separador></Separador>
-            <Productos></Productos>
+            <About id="about"></About>
             <Separador></Separador>
-            <About></About>
-            <Separador></Separador>
-            <ContactForm></ContactForm>
+            <ContactForm id="contacto"></ContactForm>
             <Separador></Separador>
             <Footer></Footer>
         </>

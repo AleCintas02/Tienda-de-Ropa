@@ -4,7 +4,7 @@ import PrimaryButton from "./PrimaryButton";
 
 function Banner() {
     return (
-        <>
+        <section id="banner">
             <div className="banner">
                 <div className="contenedor-titulo-banner">
                     <h1>Estilo Urbano</h1>
@@ -14,7 +14,7 @@ function Banner() {
                     <PrimaryButton className="mt-4">CONTACTO</PrimaryButton>
                 </div>
             </div>
-        </>
+        </section>
     );
 }
 

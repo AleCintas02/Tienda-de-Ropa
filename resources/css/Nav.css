@@ -11,8 +11,11 @@ nav {
     background-color: #1b2430;
     padding: 20px 80px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    position: relative; /* Asegúrate de que el navbar esté correctamente posicionado */
-    z-index: 10; /* Asegúrate de que el navbar esté por encima de otros elementos */
+    position: sticky; /* Cambiado de fixed a sticky */
+    top: 0; /* Asegura que el nav se quede en la parte superior cuando el usuario haga scroll */
+    left: 0; /* Asegura que el nav esté alineado al borde izquierdo */
+    right: 0; /* Asegura que el nav ocupe todo el ancho */
+    z-index: 10; /* Asegura que el nav esté encima de otros elementos */
 }
 
 #navbar {
@@ -56,7 +59,7 @@ nav {
     display: none;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 860px) {
     #navbar {
         display: flex;
         flex-direction: column;

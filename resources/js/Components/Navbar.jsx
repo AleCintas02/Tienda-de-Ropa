@@ -5,12 +5,18 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 class Navbar extends Component {
     state = { clicked: false };
+
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked });
     };
 
-    handleClick = () => {
-        this.setState({ clicked: !this.state.clicked });
+    handleScrollToSection = (e, sectionId) => {
+        e.preventDefault();
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+            this.setState({ clicked: false });
+        }
     };
 
     render() {
@@ -26,18 +32,24 @@ class Navbar extends Component {
                             className={this.state.clicked ? "#navbar active" : "#navbar"}
                         >
                             <li>
-                                <a href="#" className="active">
+                                <a href="#" onClick={(e) => this.handleScrollToSection(e, 'banner')}>
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a href="#">Productos</a>
+                                <a href="#" onClick={(e) => this.handleScrollToSection(e, 'productos')}>Productos</a>
                             </li>
                             <li>
-                                <a href="#">Quienes somos</a>
+                                <a href="#" onClick={(e) => this.handleScrollToSection(e, 'about')}>Quienes somos</a>
                             </li>
                             <li>
-                                <a href="#">Contacto</a>
+                                <a href="#" onClick={(e) => this.handleScrollToSection(e, 'contacto')}>Contacto</a>
+                            </li>
+                            <li>
+                                <a href="#">Iniciar sesión</a>
+                            </li>
+                            <li>
+                                <a href="#">Registrarse</a>
                             </li>
                         </ul>
                     </div>
